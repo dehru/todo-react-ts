@@ -30,7 +30,6 @@ export class App extends React.Component {
     this.todoStore = new TodoStore('todoApp');
     this.state = { todos: this.todoStore.todos };
     this.todoStore.addEventListener('save', () => {
-      console.log('caught save ');
       this.setState({ todos: this.todoStore.todos });
     });
     this.addTodo = this.addTodo.bind(this);
